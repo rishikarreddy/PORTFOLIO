@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-gradient-to-b from-gray-900 to-gray-800 text-white font-sans">
+  <!-- Menu Bar -->
+  <nav class="bg-gray-800 py-4 sticky top-0 shadow-lg z-50">
+    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+      <h1 class="text-xl font-bold">VELDANDA RISHIKAR REDDY</h1>
+      <ul class="flex space-x-6">
+        <li><a href="#skills" class="hover:text-blue-400">Skills</a></li>
+        <li><a href="#projects" class="hover:text-blue-400">Projects</a></li>
+        <li><a href="#experience" class="hover:text-blue-400">Experience</a></li>
+        <li><a href="#contact" class="hover:text-blue-400">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Header Section -->
+  <header class="text-center py-10 flex justify-center items-center">
+    <div class="relative">
+      <img src="C:\Users\velda\OneDrive\Desktop\portfolio\11.jpg" alt="Your Picture" class="w-80 h-80 rounded-full mx-auto border-2 border-blue-500 relative-left-4">
+    </div>
+    <h1 class="text-5xl font-bold mt-4 relative-left-4 mt-4 ml-8">
+      <span id="animated-text" class="text-5xl font-bold text-white"></span>
+      <script>
+        // The text to be animated
+        const text = "VELDANDA RISHIKAR REDDY";
+        const animatedText = document.getElementById("animated-text");
+
+        // Split text into individual words
+        const words = text.split(" ");
+
+        words.forEach((word, wordIndex) => {
+          // Split word into individual letters
+          word.split("").forEach((char, letterIndex) => {
+            // Create a span for each letter with a delay
+            const span = document.createElement("span");
+            span.textContent = char;
+            span.style.display = "inline-block";
+            span.style.opacity = 0;
+            span.style.animation = `fadeIn 0.5s ease ${(wordIndex * word.length + letterIndex) * 0.1}s forwards`;
+            
+            // Append the letter to the animated text container
+            animatedText.appendChild(span);
+            
+            // Add space between words (after each word, not between letters)
+            if (letterIndex === word.length - 1 && wordIndex !== words.length - 1) {
+              const spaceSpan = document.createElement("span");
+              spaceSpan.textContent = " "; // Space between words
+              animatedText.appendChild(spaceSpan);
+            }
+          });
+        });
+      </script>
+
+      <style>
+        /* Keyframes for fade-in animation */
+        @keyframes fadeIn {
+          0% {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      </style>
+
+      <p class="text-5xl text-white-400 text-base mt-5">
+        Aspiring Software Developer | Problem Solver
+      </p>
+    </h1>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="max-w-7xl mx-auto px-6 mt-10">
+    <h2 class="text-2xl font-bold text-center my-6">About Me</h2>
+    <div class="bg-gray-700 p-6 rounded-lg border-4 border-blue-500">
+      <p class="text-gray-300">
+        <b>
+          Hello! I'm Veldanda Rishikar Reddy, an aspiring software developer with a passion for creating innovative solutions to real-world problems. I specialize in web development and have hands-on experience with technologies like Java, Python, JavaScript, React, Node.js, and MongoDB. I love collaborating with teams to bring ideas to life and build scalable applications. When I'm not coding, you can find me exploring new tech trends or working on personal projects to improve my skills.
+        </b>
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="max-w-7xl mx-auto px-6">
+    <h2 class="text-2xl font-bold text-center my-6">Skills</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 bg-gray-700 p-6 rounded-lg shadow-lg">
+      <div class="bg-gray-800 p-4 rounded shadow hover:shadow-lg text-center">
+        <i class="fab fa-js text-yellow-400 text-3xl"></i>
+        <p class="text-lg font-semibold mt-2">JavaScript</p>
+      </div>
+      <div class="bg-gray-800 p-4 rounded shadow hover:shadow-lg text-center">
+        <i class="fab fa-react text-blue-400 text-3xl"></i>
+        <p class="text-lg font-semibold mt-2">React</p>
+      </div>
+      <div class="bg-gray-800 p-4 rounded shadow hover:shadow-lg text-center">
+        <i class="fab fa-node-js text-green-400 text-3xl"></i>
+        <p class="text-lg font-semibold mt-2">Node.js</p>
+      </div>
+      <div class="bg-gray-800 p-4 rounded shadow hover:shadow-lg text-center">
+        <i class="fas fa-database text-purple-400 text-3xl"></i>
+        <p class="text-lg font-semibold mt-2">MongoDB</p>
+      </div>
+      <div class="bg-gray-800 p-4 rounded shadow hover:shadow-lg text-center">
+        <i class="fab fa-python text-blue-300 text-3xl"></i>
+        <p class="text-lg font-semibold mt-2">Python</p>
+      </div>
+      <div class="bg-gray-800 p-4 rounded shadow hover:shadow-lg text-center">
+        <i class="fab fa-html5 text-orange-500 text-3xl"></i>
+        <p class="text-lg font-semibold mt-2">HTML5</p>
+      </div>
+      <div class="bg-gray-800 p-4 rounded shadow hover:shadow-lg text-center">
+        <i class="fab fa-css3-alt text-blue-500 text-3xl"></i>
+        <p class="text-lg font-semibold mt-2">CSS3</p>
+      </div>
+      <div class="bg-gray-800 p-4 rounded shadow hover:shadow-lg text-center">
+        <i class="fas fa-code text-gray-300 text-3xl"></i>
+        <p class="text-lg font-semibold mt-2">TypeScript</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="max-w-7xl mx-auto px-6 mt-10">
+    <h2 class="text-2xl font-bold text-center my-6">Projects</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-gray-700 p-6 rounded-lg shadow-lg">
+        <h3 class="text-xl font-bold">Weather App</h3>
+        <p class="text-gray-400 mt-2">A real-time weather application using React and OpenWeather API.</p>
+        <p class="mt-4 text-gray-300"><strong>Tech Stack:</strong> React, JavaScript, CSS</p>
+        <div class="mt-4 flex space-x-4">
+          <a href="https://github.com/rishikarreddy/weather-app" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">View Code</a>
+          <a href="https://rishikarreddy.github.io/weather-app/" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Live Project</a>
+        </div>
+      </div>
+      <div class="bg-gray-700 p-6 rounded-lg shadow-lg">
+        <h3 class="text-xl font-bold">Task Manager</h3>
+        <p class="text-gray-400 mt-2">A task management web app to organize and track daily tasks.</p>
+        <p class="mt-4 text-gray-300"><strong>Tech Stack:</strong> Node.js, Express, MongoDB</p>
+        <div class="mt-4 flex space-x-4">
+          <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">View Code</a>
+          <a href="#" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Live Project</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="max-w-7xl mx-auto px-6 mt-10">
+    <h2 class="text-2xl font-bold text-center my-6">Experience</h2>
+    <div class="bg-gray-700 p-6 rounded-lg shadow-lg">
+      <div class="mb-6">
+        <h3 class="text-xl font-bold">Generative Ai Virtual Internship-Google India</h3>
+        <p class="text-gray-400">June 2024 - December 2024</p>
+        <p class="text-gray-300 mt-2">Experienced Various Ai Tools and mainly focused on text and image genration tools </p>
+      </div>
+      <div class="mb-6">
+        <h3 class="text-xl font-bold">Freelance Web Developer</h3>
+        <p class="text-gray-400">January 2023 - May 2024</p>
+        <p class="text-gray-300 mt-2">Designed and developed responsive websites for small businesses using modern web technologies like React and Tailwind CSS.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="max-w-7xl mx-auto px-6 mt-10">
+    <h2 class="text-2xl font-bold text-center my-6">Contact</h2>
+    <div class="bg-black-700 p-6 rounded-lg shadow-lg text-center"><p class="text-white-800 text-2xl"><u><b>I'd love to hear from you! Feel free to reach out via:</b></u></p>
+      <ul class="mt-4 space-y-4 text-gray-300">
+        <li>
+          <a href="mailto:veldandarishikarreddy@gmail.com" class="hover:text-blue-400 transition duration-300">Email: veldandarishikarreddy@gmail.com</a>
+        </li>
+        <li>
+          <a href="tel:+916303659537" class="hover:text-blue-400 transition duration-300">Phone: +916303659537</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/veldanda-rishikar-reddy-01360125a" target="_blank" class="hover:text-blue-400 transition duration-300">LinkedIn: VELDANDA RISHIKAR REDDY</a>
+        </li>
+        <li>
+          <a href="https://github.com/rishikarreddy" target="_blank" class="hover:text-blue-400 transition duration-300">GitHub: RISHIKAR REDDY</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+</body>
+</html>
