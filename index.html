@@ -20,64 +20,64 @@
       </ul>
     </div>
   </nav>
+<!-- Header Section -->
+<header class="text-center py-10 flex justify-center items-center flex-col">
+  <div class="relative">
+    <img src="11.jpg" alt="Your Picture" class="w-80 h-80 rounded-full mx-auto border-2 border-blue-500">
+  </div>
+  <h1 class="text-5xl font-bold mt-4">
+    <span id="animated-text" class="text-5xl font-bold text-white"></span>
+    <script>
+      // The text to be animated
+      const text = "VELDANDA RISHIKAR REDDY";
+      const animatedText = document.getElementById("animated-text");
 
-  <!-- Header Section -->
-  <header class="text-center py-10 flex justify-center items-center">
-    <div class="relative">
-      <img src="11.jpg" alt="Your Picture" class="w-80 h-80 rounded-full mx-auto border-2 border-blue-500 relative-left-4">
-    </div>
-    <h1 class="text-5xl font-bold mt-4 relative-left-4 mt-4 ml-8">
-      <span id="animated-text" class="text-5xl font-bold text-white"></span>
-      <script>
-        // The text to be animated
-        const text = "VELDANDA RISHIKAR REDDY";
-        const animatedText = document.getElementById("animated-text");
+      // Split text into individual words
+      const words = text.split(" ");
 
-        // Split text into individual words
-        const words = text.split(" ");
-
-        words.forEach((word, wordIndex) => {
-          // Split word into individual letters
-          word.split("").forEach((char, letterIndex) => {
-            // Create a span for each letter with a delay
-            const span = document.createElement("span");
-            span.textContent = char;
-            span.style.display = "inline-block";
-            span.style.opacity = 0;
-            span.style.animation = `fadeIn 0.5s ease ${(wordIndex * word.length + letterIndex) * 0.1}s forwards`;
-            
-            // Append the letter to the animated text container
-            animatedText.appendChild(span);
-            
-            // Add space between words (after each word, not between letters)
-            if (letterIndex === word.length - 1 && wordIndex !== words.length - 1) {
-              const spaceSpan = document.createElement("span");
-              spaceSpan.textContent = " "; // Space between words
-              animatedText.appendChild(spaceSpan);
-            }
-          });
+      words.forEach((word, wordIndex) => {
+        // Split word into individual letters
+        word.split("").forEach((char, letterIndex) => {
+          // Create a span for each letter with a delay
+          const span = document.createElement("span");
+          span.textContent = char;
+          span.style.display = "inline-block";
+          span.style.opacity = 0;
+          span.style.animation = `fadeIn 0.5s ease ${(wordIndex * word.length + letterIndex) * 0.1}s forwards`;
+          
+          // Append the letter to the animated text container
+          animatedText.appendChild(span);
+          
+          // Add space between words (after each word, not between letters)
+          if (letterIndex === word.length - 1 && wordIndex !== words.length - 1) {
+            const spaceSpan = document.createElement("span");
+            spaceSpan.textContent = " "; // Space between words
+            animatedText.appendChild(spaceSpan);
+          }
         });
-      </script>
+      });
+    </script>
 
-      <style>
-        /* Keyframes for fade-in animation */
-        @keyframes fadeIn {
-          0% {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          100% {
-            opacity: 1;
-            transform: translateY(0);
-          }
+    <style>
+      /* Keyframes for fade-in animation */
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
         }
-      </style>
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
 
-      <p class="text-5xl text-white-400 text-base mt-5">
-        Aspiring Software Developer | Problem Solver
-      </p>
-    </h1>
-  </header>
+    <p class="text-5xl text-white-400 text-base mt-5">
+      Aspiring Software Developer | Problem Solver
+    </p>
+  </h1>
+</header>
+
 
   <!-- About Section -->
   <section id="about" class="max-w-7xl mx-auto px-6 mt-10">
